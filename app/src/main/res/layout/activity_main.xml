@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonFW"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:onClick="ForwardMove"
+        android:text="Foreward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="271dp"
+        android:layout_weight="0.3"
+        android:contentDescription="cameraView"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFW"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBW"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="BackwardMove"
+        android:text="Backward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFW" />
+
+    <Button
+        android:id="@+id/buttonLF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:onClick="LeftMove"
+        android:text="Left"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBW"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFW" />
+
+    <Button
+        android:id="@+id/buttonRI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:onClick="RightMove"
+        android:text="Right"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBW"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFW" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Stop"
+        android:text="Stop"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBW"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRI"
+        app:layout_constraintStart_toEndOf="@+id/buttonLF"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFW" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="87dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="traveled distance"
+        android:textColor="#070000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/speedReg"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/SpeedView"
+        android:layout_width="50dp"
+        android:layout_height="19dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Speed"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/speedReg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toEndOf="@+id/buttonBW"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRI"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:text="Travelled Distance"
+        app:layout_constraintBottom_toTopOf="@+id/distance"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBW"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLF"
+        app:layout_constraintVertical_bias="0.898" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

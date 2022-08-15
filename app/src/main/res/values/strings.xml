@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">icar13</string>
+    <string name="camera_view">\@camera_view</string>
+</resources>
